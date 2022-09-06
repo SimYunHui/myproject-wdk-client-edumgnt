@@ -1,0 +1,58 @@
+import { ValueType } from 'realgrid';
+
+export const Config = [
+  {
+    fieldName: 'role_no',
+    dataType: ValueType.TEXT,
+    headerText: 'Role 번호',
+    width: 100,
+    editable: false,
+    textAlignment: 'left',
+    visible: true,
+  },
+  {
+    fieldName: 'role_type',
+    dataType: ValueType.TEXT,
+    headerText: 'Role 유형',
+    width: 150,
+    editable: false,
+    textAlignment: 'center',
+    visible: true,
+  },
+  {
+    fieldName: 'role_name',
+    dataType: ValueType.TEXT,
+    headerText: 'Role 명',
+    width: 150,
+    editable: false,
+    textAlignment: 'left',
+    visible: true,
+  },
+  {
+    fieldName: 'system_yn',
+    dataType: ValueType.TEXT,
+    headerText: '시스템 여부',
+    width: 60,
+    editable: false,
+    textAlignment: 'center',
+    visible: true,
+  },
+  {
+    fieldName: 'use_yn',
+    dataType: ValueType.TEXT,
+    headerText: '사용 여부',
+    width: 60,
+    editable: false,
+    textAlignment: 'center',
+    visible: true,
+  },
+  {
+    fieldName: 'remark',
+    dataType: ValueType.TEXT,
+    headerText: '비고',
+    width: 150,
+    editable: false,
+    textAlignment: 'left',
+    visible: true,
+  },
+];

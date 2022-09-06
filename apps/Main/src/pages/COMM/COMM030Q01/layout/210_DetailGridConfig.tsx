@@ -1,0 +1,128 @@
+import { ValueType } from "realgrid";
+import { GRIDSTYLETYPE } from "@vntgcorp/vntg-wdk-client";
+import { DETAILFIELD } from "../util/constants";
+import { GridConfigType } from "../util/Types";
+
+export const Config: GridConfigType[] = [
+  {
+    fieldName: DETAILFIELD.USER_ID,
+    dataType: ValueType.TEXT,
+    headerText: "사용자 ID",
+    width: 100,
+    editable: false,
+    styleName: GRIDSTYLETYPE.TEXTLEFT,
+    visible: false,
+  },
+  {
+    fieldName: DETAILFIELD.MENU_NAME,
+    dataType: ValueType.TEXT,
+    headerText: "메뉴명",
+    width: 200,
+    editable: false,
+
+    styleName: GRIDSTYLETYPE.TEXTLEFT,
+    visible: true,
+  },
+
+  {
+    fieldName: DETAILFIELD.SORT_SEQ,
+    dataType: ValueType.NUMBER,
+    headerText: "정렬순서",
+    width: 170,
+    editable: false,
+
+    styleName: GRIDSTYLETYPE.TEXTCENTER,
+    visible: false,
+  },
+  {
+    fieldName: DETAILFIELD.SYSTEM_CODE,
+    dataType: ValueType.TEXT,
+    headerText: "시스템코드",
+    width: 60,
+    editable: false,
+    styleName: GRIDSTYLETYPE.TEXTCENTER,
+    visible: false,
+  },
+  {
+    fieldName: DETAILFIELD.PGM_ID,
+    dataType: ValueType.TEXT,
+    headerText: "프로그램id",
+    width: 60,
+    editable: false,
+
+    styleName: GRIDSTYLETYPE.TEXTCENTER,
+    visible: false,
+  },
+  {
+    fieldName: DETAILFIELD.PGM_TYPE,
+    dataType: ValueType.TEXT,
+    headerText: "프로그램유형",
+    width: 60,
+    editable: false,
+    styleName: GRIDSTYLETYPE.TEXTCENTER,
+    visible: true,
+  },
+  {
+    fieldName: DETAILFIELD.USE_YN,
+    dataType: ValueType.TEXT,
+    headerText: "사용여부",
+    width: 70,
+    editable: false,
+    styleName: GRIDSTYLETYPE.TEXTCENTER,
+    visible: true,
+  },
+  {
+    fieldName: DETAILFIELD.SELECT_YN,
+    dataType: ValueType.TEXT,
+    headerText: "조회선택여부",
+    width: 70,
+    editable: false,
+    styleName: GRIDSTYLETYPE.TEXTCENTER,
+    visible: true,
+  },
+  {
+    fieldName: DETAILFIELD.PRINT_YN,
+    dataType: ValueType.TEXT,
+    headerText: "인쇄여부",
+    width: 70,
+    editable: false,
+    styleName: GRIDSTYLETYPE.TEXTCENTER,
+    visible: true,
+  },
+  {
+    fieldName: DETAILFIELD.SAVE_YN,
+    dataType: ValueType.TEXT,
+    headerText: "저장여부",
+    width: 70,
+    editable: false,
+    styleName: GRIDSTYLETYPE.TEXTCENTER,
+    visible: true,
+  },
+  {
+    fieldName: DETAILFIELD.CUSTOM_YN,
+    dataType: ValueType.TEXT,
+    headerText: "커스텀여부",
+    width: 70,
+    editable: false,
+    styleName: GRIDSTYLETYPE.TEXTCENTER,
+    visible: true,
+  },
+  {
+    fieldName: DETAILFIELD.MENU_TYPE,
+    dataType: ValueType.TEXT,
+    headerText: "메뉴타입",
+    width: 70,
+    editable: false,
+    styleName: GRIDSTYLETYPE.TEXTCENTER,
+    visible: false,
+  },
+  {
+    fieldName: DETAILFIELD.ROW_STAT,
+    dataType: ValueType.TEXT,
+    headerText: "",
+    width: 0,
+    editable: true,
+    styleName: GRIDSTYLETYPE.TEXTCENTER,
+    visible: false,
+  },
+];

@@ -1,0 +1,58 @@
+import { ValueType } from 'realgrid';
+
+export const Config = [
+  {
+    fieldName: 'group_sno',
+    dataType: ValueType.TEXT,
+    headerText: 'Group 일련번호',
+    width: 100,
+    editable: false,
+    textAlignment: 'left',
+    visible: false,
+  },
+  {
+    fieldName: 'user_id',
+    dataType: ValueType.TEXT,
+    headerText: '사용자 ID',
+    width: 100,
+    editable: false,
+    styleName: 'TextAlignLeft',
+    visible: true,
+  },
+  {
+    fieldName: 'user_name',
+    dataType: ValueType.TEXT,
+    headerText: '사용자 명',
+    width: 80,
+    editable: false,
+    styleName: 'TextAlignLeft',
+    visible: true,
+  },
+  {
+    fieldName: 'user_level',
+    dataType: ValueType.TEXT,
+    headerText: '레벨',
+    width: 70,
+    editable: false,
+    textAlignment: 'center',
+    visible: true,
+  },
+  {
+    fieldName: 'emp_no',
+    dataType: ValueType.TEXT,
+    headerText: '사원 번호',
+    width: 60,
+    editable: false,
+    styleName: 'TextAlignCenter',
+    visible: true,
+  },
+  {
+    fieldName: 'remark',
+    dataType: ValueType.TEXT,
+    headerText: '비고',
+    width: 150,
+    editable: false,
+    textAlignment: 'left',
+    visible: false,
+  },
+];

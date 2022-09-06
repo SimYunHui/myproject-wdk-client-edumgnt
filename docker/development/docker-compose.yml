@@ -1,0 +1,18 @@
+version: "3.7"
+services:
+  nginx:
+    container_name: vntg-wdk-client-quick-starter
+    image: ghcr.io/vntgcorp/vntg-wdk-client-quick-starter:develop
+    ports:
+      # host:container
+      - "80:80"
+    # volumes:
+      # 직접 입력할 경우 - local(host):container
+      #- ./docker/nginx/Development:/etc/nginx/conf.d
+      # Django의 static 경로를 매핑하고자하는 nginx 경로 - 운영일때는 경로 바꿔야 함
+      # - static_volume:/usr/src/app/staticfiles
+    environment:
+      - TZ=Asia/Seoul
+    # depends_on:
+    #   - backend
+    restart: unless-stopped

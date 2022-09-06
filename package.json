@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "lerna run --scope @vntg-wdt/* --parallel start",
+    "build": "lerna run --scope @vntg-wdt/* build",
+    "serve": "lerna run --scope @vntg-wdt/* --parallel serve",
+    "clean": "lerna run --scope @vntg-wdt/* --parallel clean",
+    "bootstrap": "yarn install && lerna bootstrap && yarn makeconfig",
+    "makeconfig": "cd apps/Main && yarn run make-config"
+  },
+  "devDependencies": {
+    "lerna": "3.22.1"
+  },
+  "workspaces": {
+    "packages": [
+      "apps/*"
+    ]
+  },
+  "version": "1.0.0"
+}

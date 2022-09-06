@@ -1,0 +1,13 @@
+.infoBlock {
+  display: inline-block;
+  width: 250px;
+  border-bottom: solid 1px #d4d8e1;
+  box-shadow: rgba(189, 197, 211, 0.5) 0px 2px 4px 0px;
+  text-align: center;
+
+  span {
+    vertical-align: top;
+    padding: 0.24rem 0px 0px 0.3rem;
+    display: inline-block;
+  }
+}

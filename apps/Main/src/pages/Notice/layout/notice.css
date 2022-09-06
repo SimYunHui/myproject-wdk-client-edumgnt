@@ -1,0 +1,15 @@
+
+.notice .detail-table-wrapper .detailWrapper ,
+.notice .detail-table-wrapper .detailWrapper > table {
+    height: 100%;
+}
+
+.notice.ql-container.ql-snow {
+    height: 100%;
+}
+.notice .detail-table-wrapper .detailWrapper > table tr:nth-child(4){
+    height: 90%;
+}
+.notice .input-field__field {
+    height: 100%;
+}
