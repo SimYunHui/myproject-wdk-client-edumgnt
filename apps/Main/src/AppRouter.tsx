@@ -26,11 +26,11 @@ enum routingType {
   SAFETY,
   HEALTH,
   BIZCOMMON,
+  EDUMGNT,
 }
 function AppRouter({}: Props) {
   console.log("app Router");
   const [routeType, setRouteType] = React.useState<routingType>();
-  // const [system, setSystem] = React.useState({});
   const urlParam = useLocation();
   const ProgramLayout = styled.section`
     padding-left: 60px;
@@ -40,11 +40,17 @@ function AppRouter({}: Props) {
   React.useEffect(() => {
     const locationURL = window.location.href.split(`/`);
     console.log(locationURL);
+
     if (locationURL.includes("bizcommon")) {
       setRouteType(routingType.BIZCOMMON);
-    } else if (locationURL.includes("common")) {
+    } 
+    else if (locationURL.includes("common")) {
       setRouteType(routingType.COMMON);
-    } else {
+    } 
+    else if (locationURL.includes("edumgnt")) {
+      setRouteType(routingType.BIZCOMMON);
+    } 
+    else {
       setRouteType(routingType.DEFAULT);
       console.log("out of routign rule");
     }
@@ -64,7 +70,7 @@ function AppRouter({}: Props) {
         <ProgramLayout>
           <Component />
         </ProgramLayout>
-      );
+      ); 
     case routingType.COMMON:
       return (
         <ProgramLayout>
