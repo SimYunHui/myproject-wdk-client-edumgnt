@@ -4,7 +4,7 @@ type Props = {}
 
 function EDU010E01({}: Props) {
   return (
-    <div>교육계획관리 </div>
+    <div>교육일정관리 </div>
   )
 }
 

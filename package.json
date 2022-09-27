@@ -16,5 +16,10 @@
       "apps/*"
     ]
   },
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "dependencies": {
+    "@nivo/bar": "^0.80.0",
+    "@nivo/core": "^0.80.0",
+    "@nivo/pie": "^0.80.0"
+  }
 }

@@ -1,11 +1,51 @@
-import React from 'react'
+import { IResData, Title, useSyncHttpCient } from '@vntgcorp/vntg-wdk-client';
+import * as React from 'react';
+import { ResponsivePie } from '@nivo/pie';
+import styled from 'styled-components';
+import TotalCount from './layout/TotalCount';
+import ByJobCount from './layout/ByJobCount';
+import ByRespCount from './layout/ByRespCount';
 
-type Props = {}
+    /* 
+    화면 스타일 선언 */
+    const TopContent = styled.section`
+    float: center;
+    width: 100%;
+    height: 50%;
+  `;
+    const LeftContent = styled.section`
+    float: left;
+    width: 50%;
+    height: 50%;
+  `;
+  const RightContent = styled.section`
+    float: right;
+    width: 50%;
+    height: 50%;
+  `;
 
-function EDU020E01({}: Props) {
-  return (
-    <div>교육현황 </div>
-  )
-}
+const EDU020E01 = () => {
+    const handle = {
+        padClick: (data: any) => {
+            console.log(data);
+        },
 
-export default EDU020E01
+        legendClick: (data: any) => {
+            console.log(data);
+        },
+    };
+    return <>
+      <Title></Title>
+      <TopContent>
+        <TotalCount></TotalCount>
+      </TopContent>
+      <LeftContent>
+        <ByJobCount></ByJobCount>
+      </LeftContent>
+      <RightContent>
+        <ByRespCount></ByRespCount>
+      </RightContent>
+    </>
+};
+
+export default EDU020E01;
