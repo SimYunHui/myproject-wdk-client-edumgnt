@@ -13,6 +13,7 @@ const AppRouter = (props: AppRouteProps) => {
   console.log(`APP_ROUTER`);
   const [path, setPath] = useState<Array<string>>([]);
   React.useEffect(() => {
+    console.log("AppRouter useeffect >>"+location.href.split("/"));
     setPath(location.href.split("/"));
   }, []);
 
