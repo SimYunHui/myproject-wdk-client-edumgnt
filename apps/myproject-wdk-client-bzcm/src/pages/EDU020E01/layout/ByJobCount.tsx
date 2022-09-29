@@ -1,7 +1,17 @@
-import * as React from 'react';
+import React, { useEffect, useState } from "react";
 import { ResponsivePie } from '@nivo/pie';
 
-const ByJobCount = () => {
+type PropsType ={
+    data:any
+}
+
+const ByJobCount = ({data}: PropsType) => {
+
+    const [graphData,setDataTemp]= React.useState<any>(data); 
+    useEffect(()=>{
+        setDataTemp(data)
+    },[data])
+
     const handle = {
         padClick: (data: any) => {
             console.log(data);
@@ -11,6 +21,7 @@ const ByJobCount = () => {
             console.log(data);
         },
     };
+
     return (
         // chart height이 100%이기 때문이 chart를 덮는 마크업 요소에 height 설정
         <div style={{ width: '540px', height: '350px', margin: '0 auto', paddingTop: '50px' }}>
@@ -19,12 +30,7 @@ const ByJobCount = () => {
                 /**
                  * chart에 사용될 데이터
                  */
-                data={[
-                    { id: '전산관리', value: 115 },
-                    { id: '전산개발', value: 56 },
-                    { id: '영업', value: 7 },
-                    { id: '마케팅', value: 15 },
-                ]}
+                data={graphData}
                 activeOuterRadiusOffset={8}
                 /**
                  * chart margin

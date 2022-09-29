@@ -6,8 +6,8 @@ type PropsType ={
     data:any
 }
 
-// 연도별 교육현황
-const LeftContentGraph = ({ data }: PropsType )  => {
+// 부서별 교육현황
+const RightContentGraph = ({ data }: PropsType )  => {
     const handle = {
         barClick: (data: any) => {
             console.log(data);
@@ -24,9 +24,9 @@ const LeftContentGraph = ({ data }: PropsType )  => {
 
         <div style={{ width: '100%', height: '600px'}}>
             <div style={{ float:'left', marginTop:'10px', paddingRight:'5px'}}><FcBarChart size={24}></FcBarChart></div>
-            <div style={{ float:'left'}}> <h4> 연도별교육현황</h4></div>
+            <div style={{ float:'left'}}> <h4> 부서별교육현황</h4></div>
             <div style={{color: 'grey', marginLeft:'40px'}}>
-                <h6 style={{ paddingTop: '46px'}}>- 최근 3개년 추이</h6>
+                <h6 style={{ paddingTop: '46px'}}>- 전체 부서별 계획/실적</h6>
              </div>
             <ResponsiveBar
                 /**
@@ -40,7 +40,7 @@ const LeftContentGraph = ({ data }: PropsType )  => {
                 /**
                  * keys들을 그룹화하는 index key (분류하는 값)
                  */
-                indexBy="연도"
+                indexBy="부서"
                 /**
                  * chart margin
                  */
@@ -167,4 +167,4 @@ const LeftContentGraph = ({ data }: PropsType )  => {
     );
 };
 
-export default LeftContentGraph;
+export default RightContentGraph;

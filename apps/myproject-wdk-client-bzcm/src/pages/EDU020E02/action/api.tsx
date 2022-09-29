@@ -14,29 +14,22 @@
     */
     retrieve = async (searchValue) => {
       const config = {
-        url: "/api/bzcm/EDU020E01/empCountlist/",
+        url: "/api/bzcm/EDU020E02/byYearEduList/",
         params: {
           p_use_yn: 'Y'
         },
       };
       return this.httpRequest(config);
     };
+
     retrieve2 = async (searchValue) => {
       const config = {
-        url: "/api/bzcm/EDU020E01/empByJobCountlist/",
+        url: "/api/bzcm/EDU020E02/byDeptEduList/",
         params: {
           p_use_yn: 'Y'
         },
       };
       return this.httpRequest(config);
     };
-    retrieve3 = async (searchValue) => {
-      const config = {
-        url: "/api/bzcm/EDU020E01/empByRespCountlist/",
-        params: {
-          p_use_yn: 'Y'
-        },
-      };
-      return this.httpRequest(config);
-    };
+    
   }

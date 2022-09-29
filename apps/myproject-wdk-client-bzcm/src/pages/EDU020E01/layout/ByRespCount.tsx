@@ -1,7 +1,18 @@
-import * as React from 'react';
+import React, { useEffect, useState } from "react";
 import { ResponsivePie } from '@nivo/pie';
 
-const ByRespCount = () => {
+
+type PropsType ={
+    data:any
+}
+
+const ByRespCount = ({data}: PropsType) => {
+
+    const [graphData,setDataTemp]= React.useState<any>(data); 
+    useEffect(()=>{
+        setDataTemp(data)
+    },[data])
+
     const handle = {
         padClick: (data: any) => {
             console.log(data);
@@ -19,13 +30,7 @@ const ByRespCount = () => {
                 /**
                  * chart에 사용될 데이터
                  */
-                data={[
-                    { id: '매니저', value: 156 },
-                    { id: '파트장', value: 24 },
-                    { id: '팀장', value: 15 },
-                    { id: '본부장', value: 3 },
-                    { id: '센터장', value: 6 },
-                ]}
+                data={graphData}
                 activeOuterRadiusOffset={8}
                 /**
                  * chart margin

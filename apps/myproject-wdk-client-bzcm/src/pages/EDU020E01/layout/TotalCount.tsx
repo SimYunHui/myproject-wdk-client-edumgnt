@@ -3,23 +3,23 @@ import {
     getDate,
     GridHdBtnType,
     GridHeader,
+    Retrive,
     userInfoGlobalState,
   } from "@vntgcorp/vntg-wdk-client";
   import React, { useEffect, useState } from "react";
 import { ResponsivePie } from '@nivo/pie';
 
-const TotalCount = (props) => {
-    console.log("totalcount.tsx11 === props >>>>"+JSON.stringify(props.props));
+type PropsType ={
+    data:any
+}
 
-    const data = [
-        { id: 'ERP운영팀', value: 324 },
-        { id: '정보보호팀', value: 88 },
-        { id: '사업1팀', value: 221 },
-        { id: '사업2팀', value: 123 },
-    ]; 
-    const [score, setScore] = useState({});
+const TotalCount = ({ data }: PropsType ) => {
+    console.log("totalcount.tsx === props >>>>"+JSON.stringify(data));
+    const [graphData,setDataTemp]= React.useState<any>(data); 
 
-    //setScore(data_tmp);
+    useEffect(()=>{
+        setDataTemp(data)
+    },[data])
 
     const handle = {
         padClick: (data: any) => {
@@ -30,7 +30,6 @@ const TotalCount = (props) => {
             console.log(data);
         },
     };
-
     return (
         // chart height이 100%이기 때문이 chart를 덮는 마크업 요소에 height 설정
         <div style={{ width: '720px', height: '450px', margin: '0 auto', paddingTop: '50px' }}>
@@ -39,7 +38,7 @@ const TotalCount = (props) => {
                 /**
                  * chart에 사용될 데이터
                  */
-                data={data}
+                data={graphData}
                 activeOuterRadiusOffset={8}
                 /**
                  * chart margin
